@@ -35,7 +35,7 @@ class AuthorizationCodeFactory implements HandlerInterface
 
     public function bind($name, $param, callable $callable = null)
     {
-        $this->event->
+
     }
 
     public function exec()

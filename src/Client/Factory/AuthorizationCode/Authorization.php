@@ -33,28 +33,6 @@ class Authorization implements AuthorizationInterface
     public function process(Curl $Curl, callable $customProcess = null)
     {
         try {
-            /*
-            $host = $_SERVER['HTTP_HOST'];
-
-            $url = "http://{$host}/OAuth2.0/authorization";
-            $parameters = [
-                'response_type' => 'code',
-                'client_id' => 'aaaaa',
-                'redirect_uri' => "http://{$host}/test/fake/redirectCallback",
-                'scope' => 'a,c',
-                'state' => 'accbjnd',
-            ];
-
-            if (I('get.silent') == 1) {
-                $mid = 336566;
-                $mid = Encrypt::authcode("{$mid}-jiayouapp", "ENCODE");
-                $mid = base64_encode($mid);
-                $parameters['userId'] = $mid;
-            }
-
-            $url .= "?" . http_build_query($parameters);
-            header("Location: {$url}");
-             */
             foreach ($this->processList() as $event => $callable)
             {
                 call_user_func_array($callable, $this->params[$event]);
