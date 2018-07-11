@@ -1,6 +1,6 @@
 # OAuth2.0 Library
 
-参考引用：https://github.com/bshaffer/oauth2-server-php(非常感谢)
+参考引用（鸣谢）：https://github.com/bshaffer/oauth2-server-php
 
 说明：
 利用php的可传递callable类型参数的特性，将storage部分提取为函数绑定的机制。
